@@ -19,6 +19,7 @@ const Profile = () => {
         padding: 16,
         paddingTop: mediumSize ? 0 : 16,
         overflow: "hidden",
+        paddingBottom: 0
       }}
     >
       <ScrollView

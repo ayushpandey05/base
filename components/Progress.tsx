@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Text, Touch, View } from "../easy-ui/core-components";
+import { Text, View } from "../easy-ui/core-components";
 import useDidMount from "../hooks/useDidMount";
 import useTheme from "../theme";
 
@@ -36,10 +36,10 @@ const Progress = ({ title, percentage }) => {
           backgroundColor: colors.borderColor,
         }}
       >
-        <Touch
+        <View
           style={{
             width: `${widthPercent}%`,
-            backgroundColor: "red",
+            backgroundColor: colors.pinkV1,
             borderRadius: 8,
             transition: "all 1s",
           }}

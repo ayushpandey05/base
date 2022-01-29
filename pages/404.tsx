@@ -13,7 +13,7 @@ const PageNotFound = () => {
         backgroundColor: colors.background,
       }}
     >
-      <Page404Svg />
+      <Page404Svg width="50%" height="50%" fill={colors.defaultText} />
     </View>
   );
 };

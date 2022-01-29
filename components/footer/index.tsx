@@ -36,7 +36,7 @@ const Footer = () => {
         }}
       >
         <FlatList
-          style={{ marginTop: 24 }}
+          // style={{ marginTop: 24 }}
           contentContainerStyle={{
             gap: 24,
             justifyContent: "center",

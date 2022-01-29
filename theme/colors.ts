@@ -4,7 +4,8 @@ const lightColors = {
   instagram: '#fb3958',
   facebook: '#4267B2',
   linkedin: '#0077b5',
-  pinkV1: '#E63E6D'
+  pinkV1: '#E63E6D',
+  borderColor: '#160040'
 };
 
 const darkColors = {
@@ -13,7 +14,8 @@ const darkColors = {
   instagram: '#125688',
   facebook: '#4267B2',
   linkedin: '#0077b5',
-  pinkV1: '#E63E6D'
+  pinkV1: '#E63E6D',
+  borderColor: '#EEEEEE'
 };
 
 export { lightColors, darkColors };

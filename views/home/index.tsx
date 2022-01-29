@@ -23,7 +23,7 @@ const data = {
   title: "Ayush Pandey",
   animTitle: ["Hi all, I'm Ayush", "I'm a frontend developer"],
   description:
-    "A passionate Front-end Developer (Mobile and Web) Developer having an experience of building Web applications with Reactjs/Nextjs and Cross Platform Mobile Apps With React Native.",
+    "A passionate Front-end Developer (Mobile and Web) having an experience of building Web applications with Reactjs/Nextjs and Cross Platform Mobile Apps With React Native.",
 };
 
 const socialLinks = [

@@ -5,6 +5,10 @@ import MenuSvg from "./menu.svg";
 import CrossSvg from "./cross.svg";
 import SunSvg from "./sun.svg";
 import MoonSvg from "./moon.svg";
+import DeveloperSvg from "./front-end-development.svg";
+import InstagramSvg from "./instagram.svg";
+import FacebookSvg from "./facebook.svg";
+import LinkedinSvg from "./linkedin.svg";
 
 export {
   UserOnSystemSvg,
@@ -14,4 +18,8 @@ export {
   CrossSvg,
   SunSvg,
   MoonSvg,
+  DeveloperSvg,
+  InstagramSvg,
+  FacebookSvg,
+  LinkedinSvg
 };

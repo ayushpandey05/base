@@ -1,12 +1,10 @@
 import { useState } from "react";
-import { CrossSvg, MenuSvg } from "../../assets/svg";
-import { SMALL_SIZE } from "../../constants/screenSize";
-import { View, Touch, Text } from "../../easy-ui/core-components";
+import { MEDIUM_SIZE, SMALL_SIZE } from "../../constants/screenSize";
+import { View } from "../../easy-ui/core-components";
 import useDidMount from "../../hooks/useDidMount";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 import useTheme from "../../theme";
 import { useEventListener } from "../listener";
-import { useThemeMode } from "../theme-container";
 import { links } from "./links";
 import RenderLink from "./RenderLink";
 import ToggleMenu from "./ToggleMenu";
@@ -24,10 +22,10 @@ const Header = (props) => {
     });
   });
 
-  const { toggleTheme } = useThemeMode();
   const { width } = useWindowDimensions();
-  let direction = width >= SMALL_SIZE ? "row" : "column";
-
+  let direction: "column" | "row" = width >= SMALL_SIZE ? "row" : "column";
+  const mediumSize = width < MEDIUM_SIZE;
+  const smallSize = width < SMALL_SIZE;
   let linksVisible = true;
   if (width >= SMALL_SIZE) {
     linksVisible = true;
@@ -37,30 +35,38 @@ const Header = (props) => {
   const { colors } = useTheme();
 
   return (
-    <View
-      style={{ flexDirection: direction, backgroundColor: colors.background }}
-    >
-      {direction === "column" ? (
-        <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
-          <ToggleTheme />
-          <ToggleMenu isOpened={isOpened} toggleMenu={toggleMenu} />
-        </View>
-      ) : (
-        void 0
-      )}
-      {linksVisible
-        ? links.map((item) => {
-            return <RenderLink {...item} />;
-          })
-        : void 0}
-      {direction === "row" ? (
-        <View style={{ flex: 1, alignItems: "flex-end" }}>
-          <ToggleTheme />
-        </View>
-      ) : (
-        void 0
-      )}
-      {/* <Touch onPress={toggleTheme}>Toggle Theme</Touch> */}
+    <View style={{ backgroundColor: colors.background }}>
+      <View
+        style={{
+          flexDirection: direction,
+          marginLeft: smallSize ? 0 : mediumSize ? 32 : "15%",
+          marginRight: smallSize ? 0 : mediumSize ? 32 : "15%",
+          ...(!smallSize && { alignItems: "center" }),
+        }}
+      >
+        {direction === "column" ? (
+          <View
+            style={{ flexDirection: "row", justifyContent: "space-between" }}
+          >
+            <ToggleTheme />
+            <ToggleMenu isOpened={isOpened} toggleMenu={toggleMenu} />
+          </View>
+        ) : (
+          void 0
+        )}
+        {linksVisible
+          ? links.map((item) => {
+              return <RenderLink {...item} />;
+            })
+          : void 0}
+        {direction === "row" ? (
+          <View style={{ flex: 1, alignItems: "flex-end" }}>
+            <ToggleTheme />
+          </View>
+        ) : (
+          void 0
+        )}
+      </View>
     </View>
   );
 };

@@ -14,7 +14,7 @@ const About = () => {
         alignItems: "center",
       }}
     >
-      <CommingSoonSvg fill={colors.defaultText} />
+      <CommingSoonSvg fill={colors.defaultText} width="20%" height="20%" />
     </View>
   );
 };

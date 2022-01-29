@@ -4,6 +4,8 @@ import { CSSProperties, FC } from "react";
 import { SMALL_SIZE } from "../../constants/screenSize";
 import { Text, View } from "../../easy-ui/core-components";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
+import useTheme from "../../theme";
+import { fontFamily } from "../../theme/fontFamily";
 
 const RenderLink: FC<{ title: string; link: string }> = ({ title, link }) => {
   const router = useRouter();
@@ -14,6 +16,7 @@ const RenderLink: FC<{ title: string; link: string }> = ({ title, link }) => {
   if (width < SMALL_SIZE) {
     textContainer.alignItems = "center";
   }
+  const { colors } = useTheme();
 
   return (
     <Link href={link || ""}>
@@ -27,7 +30,15 @@ const RenderLink: FC<{ title: string; link: string }> = ({ title, link }) => {
           ...textContainer,
         }}
       >
-        <Text style={{ color: isActive ? "red" : "black", fontWeight: 700 }}>{title}</Text>
+        <Text
+          style={{
+            color: isActive ? colors.pinkV1 : colors.defaultText,
+            fontWeight: isActive ? 700 : 700,
+            fontFamily: fontFamily.roboto,
+          }}
+        >
+          {title}
+        </Text>
       </View>
     </Link>
   );

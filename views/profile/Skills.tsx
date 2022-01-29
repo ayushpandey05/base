@@ -17,7 +17,7 @@ const Skills = () => {
           fontFamily: fontFamily.roboto,
         }}
       >
-        {title}
+        {`${title}`}
       </Text>
       <Progress title="React" percentage={80} />
       <Progress title="React Native" percentage={80} />

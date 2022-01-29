@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { FC } from "react";
+import { CSSProperties, FC } from "react";
 import { SMALL_SIZE } from "../../constants/screenSize";
 import { Text, View } from "../../easy-ui/core-components";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
@@ -10,7 +10,7 @@ const RenderLink: FC<{ title: string; link: string }> = ({ title, link }) => {
   const isActive = link === router.pathname;
   const { width } = useWindowDimensions();
 
-  const textContainer = {};
+  const textContainer: CSSProperties = {};
   if (width < SMALL_SIZE) {
     textContainer.alignItems = "center";
   }

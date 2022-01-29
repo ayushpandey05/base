@@ -16,15 +16,16 @@ const Profile = () => {
       style={{
         flex: 1,
         backgroundColor: colors.background,
-        padding: 16,
+        // padding: 16,
         paddingTop: mediumSize ? 0 : 16,
         overflow: "hidden",
+        paddingBottom: 0
       }}
     >
       <ScrollView
         style={{
-          marginLeft: mediumSize ? 32 : "15%",
-          marginRight: mediumSize ? 32 : "15%",
+          marginLeft: mediumSize ? 8 : "15%",
+          marginRight: mediumSize ? 0 : "15%",
           paddingRight: 20
         }}
       >

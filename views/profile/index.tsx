@@ -17,6 +17,7 @@ const Profile = () => {
         flex: 1,
         backgroundColor: colors.background,
         // padding: 16,
+        padding: 8,
         paddingTop: mediumSize ? 0 : 16,
         overflow: "hidden",
         paddingBottom: 0

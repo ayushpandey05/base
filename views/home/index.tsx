@@ -60,7 +60,7 @@ const Home = () => {
         overflow: "hidden",
       }}
     >
-      <ScrollView style={{ flex: 1, marginTop: "10%" }}>
+      <ScrollView style={{ flex: 1, marginTop: mediumSize ? 0 : "10%" }}>
         <Text
           style={{
             color: colors.defaultText,

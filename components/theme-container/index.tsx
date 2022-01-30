@@ -1,7 +1,7 @@
 import { createContext, useContext, useState } from "react";
 import useDidMount from "../../hooks/useDidMount";
 
-const ThemeContext = createContext();
+const ThemeContext: any = createContext();
 
 const ThemeProvider = ({ children }) => {
   const [dark, setDark] = useState(false);

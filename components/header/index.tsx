@@ -18,7 +18,6 @@ const Header = (props) => {
   };
   useDidMount(() => {
     listen("temp", (props) => {
-      console.log("@@@props", props);
     });
   });
 
@@ -39,8 +38,8 @@ const Header = (props) => {
       <View
         style={{
           flexDirection: direction,
-          marginLeft: smallSize ? 0 : mediumSize ? 32 : "15%",
-          marginRight: smallSize ? 0 : mediumSize ? 32 : "15%",
+          marginLeft: smallSize ? 8 : mediumSize ? 8 : "15%",
+          marginRight: smallSize ? 0 : mediumSize ? 0 : "15%",
           ...(!smallSize && { alignItems: "center" }),
         }}
       >

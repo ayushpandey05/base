@@ -33,7 +33,6 @@ const TextPlayer = ({ data, style }) => {
   useEffect(() => {
     const currentText = data[textIndex];
     if (forward) {
-      console.log("@@@@@@@@@currentText", currentText);
       if (currentText.length > valueToDisplay.length) {
         const newvalueToDisplay =
           valueToDisplay + currentText[valueToDisplay.length];
